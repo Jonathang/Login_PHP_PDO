@@ -1,0 +1,105 @@
+/* BARRA DE NAVEGACION */
+.navbar {
+  padding: 0;
+  background: black;
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  display: flex;
+  flex-wrap: initial;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-light .navbar-brand {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navegador {
+  color: white;
+}
+.navegador:hover {
+  color: gray;
+}
+
+/* FORMULARIO REGISTRATE */
+.formulario-registrate {
+  background: #a02a3a;
+}
+
+.boton-registrate {
+  background: #ba222f;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-total {
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* FORMULARIO LOGIN */
+.formulario-login {
+  background: #a02a3a;
+}
+
+.cuerpo {
+  width: 377px;
+}
+
+.boton-login {
+  background: #ba222f;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-login {
+  margin: auto;
+  margin-top: 110px;
+}
+
+.datos {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+/* MEDIA QUERIES */
+/*  Extra Small devices (Portrait phones, 576px and up)*/
+@media (min-width: 300px) {
+}
+/* Small devices (landscape phones, 423px and up)*/
+@media (min-width: 423px) {
+}
+
+/* Medium devices (tablets, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 2200px) {
+}
