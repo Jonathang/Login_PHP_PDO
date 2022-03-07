@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  require '../modelo/db.php';
+  require '../modelo/db_local.php';
 
   if (isset($_SESSION['usuario_id'])) {
     $records = $conn->prepare('SELECT * FROM usuarios WHERE ID_usuario = :id');

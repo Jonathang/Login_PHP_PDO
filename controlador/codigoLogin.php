@@ -3,7 +3,7 @@
 if($_POST){
 
   session_start();
-  require '../modelo/db.php';
+  require '../modelo/db_local.php';
   $id = $_POST['id'];
   $password = $_POST['pass'];
   

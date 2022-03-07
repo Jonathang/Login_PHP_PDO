@@ -1,5 +1,5 @@
 <?php
-    require '../modelo/db.php';
+    require '../modelo/db_local.php';
     
     if (isset($_POST['id']) && isset($_POST['nombre']) && isset($_POST['pass'])) {
 
