@@ -84,6 +84,17 @@
   margin: auto;
 }
 
+/* PÁGINA CONSULTAR PROFESOR CALIFICACIÓN */
+.table {
+  margin-top: 50px;
+}
+
+.tabla-estudiantes {
+  width: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
 /* MEDIA QUERIES */
 /*  Extra Small devices (Portrait phones, 576px and up)*/
 @media (min-width: 300px) {

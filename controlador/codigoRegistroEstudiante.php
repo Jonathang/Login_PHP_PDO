@@ -30,7 +30,7 @@
         }
         // NOMBRE ESTUDIANTE - MATRICULA
 
-        if(empty($_POST['matricula']) || !preg_match('`[0-9]`', $matricula)){
+        if(empty($_POST['matricula']) || strlen($matricula) == 8 || !preg_match('`[0-9]`', $matricula)){
              echo"
              <script language='javascript'>
              alert('El campo matricula no puede estar vacio y debe contener solo números')
@@ -41,10 +41,10 @@
         }
         // MATRICULA
 
-         if(empty($_POST['programacion']) || !preg_match('`[0-9]`',$programacion)){
+         if(empty($_POST['programacion']) || strlen($programacion) > 4 || !preg_match('`[0-9]`',$programacion)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{
@@ -52,10 +52,10 @@
         }
         // PROGRAMACION
 
-        if(empty($_POST['matematicas']) || !preg_match('`[0-9]`',$matematicas)){
+        if(empty($_POST['matematicas']) || strlen($matematicas) > 4 || !preg_match('`[0-9]`',$matematicas)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{
@@ -63,10 +63,10 @@
         }
         // MATEMATICAS
 
-        if(empty($_POST['algoritmos']) || !preg_match('`[0-9]`',$algoritmos)){
+        if(empty($_POST['algoritmos']) || strlen($algoritmos) > 4 || !preg_match('`[0-9]`',$algoritmos)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{
@@ -75,10 +75,10 @@
         // ALGORITMOS
 
 
-        if(empty($_POST['logica']) || !preg_match('`[0-9]`',$logica)){
+        if(empty($_POST['logica']) || strlen($logica) > 4 || !preg_match('`[0-9]`',$logica)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{
@@ -86,10 +86,10 @@
         }
         // LOGICA
 
-        if(empty($_POST['so']) || !preg_match('`[0-9]`',$so)){
+        if(empty($_POST['so']) || strlen($so) > 4 || !preg_match('`[0-9]`',$so)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{
@@ -97,10 +97,10 @@
         }
         // SO
 
-        if(empty($_POST['bd']) || !preg_match('`[0-9]`',$bd)){
+        if(empty($_POST['bd']) || strlen($bd) > 4 || !preg_match('`[0-9]`',$bd)){
              echo"
              <script language='javascript'>
-             alert('Digite una calificación')
+             alert('Digite una calificación no mayor a 3 digitos')
              window.location='../vista/registroProfesor.php'
              </script>";
         }else{

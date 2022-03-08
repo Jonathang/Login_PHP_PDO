@@ -38,7 +38,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link">Consultar</a>
+                            <a class="nav-link" href="ConsultarProfesorCalificacion.php">Consultar</a>
                         </li>
 
                         <li class="nav-item">
