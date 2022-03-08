@@ -62,8 +62,8 @@
 
                         <form action="../controlador/codigoRegistroEstudiante.php" method="post" id="formulario">
 
-                            <select class="form-select" aria-label="Default select example" name="nombre_estudiante"
-                                required id="id_nombre">
+                            <select class="form-select" aria-label="Default select example" name="id_nombre" required
+                                id="id_nombre">
                                 <option value selected="">Seleccione un estudiante</option>
                                 <?php
                                 require '../controlador/consultas.php';  

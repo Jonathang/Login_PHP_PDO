@@ -1,7 +1,12 @@
 <?php
     require '../modelo/db_local.php';
     
-    if (isset($_POST['nombre_estudiante']) && isset($_POST['matricula']) && isset($_POST['programacion'])  && isset($_POST['matematicas'])  && isset($_POST['algoritmos'])  && isset($_POST['logica'])  && isset($_POST['so'])  && isset($_POST['bd'])) {
+    if (isset($_POST['id_nombre']) && isset($_POST['matricula']) && isset($_POST['programacion'])  && isset($_POST['matematicas'])  && isset($_POST['algoritmos'])  && isset($_POST['logica'])  && isset($_POST['so'])  && isset($_POST['bd'])) {
+
+        
+
+        $sql = "INSERT INTO calificaciones (matricula, programacion, matematicas, algoritmos, logica, so, bd, usuario_id_fk) VALUES (:matricula, :programacion, :matematicas, :algoritmos, :logica, :so, :bd, :id_nombre)";
+        $stmt = $conn->prepare($sql);  
 
         $matricula= $_POST['matricula'];
         $programacion= $_POST['programacion'];
@@ -10,10 +15,20 @@
         $logica = $_POST['logica'];
         $so = $_POST['so'];
         $bd = $_POST['bd'];
-     
+        $id_nombre = $_POST['id_nombre'];
+       
+         if(empty($_POST['id_nombre'])){
+             echo"
+             <script language='javascript'>
+             alert('Debe seleccionar un estudiante')
+             window.location='../vista/registroProfesor.php'
+             </script>";
+        }else{
+            $stmt->bindParam(':id_nombre', $id_nombre);
+            print_r($id_nombre);
 
-        $sql = "INSERT INTO calificaciones (matricula, programacion, matematicas, algoritmos, logica, so, bd, usuario_id_fk) VALUES (:matricula, :programacion, :matematicas, :algoritmos, :logica, :so, :bd, :fk) SET id_nombre=$id_nombre";
-        $stmt = $conn->prepare($sql);  
+        }
+        // NOMBRE ESTUDIANTE - MATRICULA
 
         if(empty($_POST['matricula']) || !preg_match('`[0-9]`', $matricula)){
              echo"
@@ -93,23 +108,12 @@
         }
         // BD
 
-        if(empty($_POST['nombre_estudiante'])){
-             echo"
-             <script language='javascript'>
-             alert('Debe seleccionar un estudiante')
-             window.location='../vista/registroProfesor.php'
-             </script>";
-        }else{
-            $stmt->bindParam(':fk', $_POST['id_nombre']);
-        }
-        // NOMBRE ESTUDIANTE - MATRICULA
-
   if ($stmt->execute()) {
 
              echo"
              <script language='javascript'>
              alert('Estudiante registrado')
-             window.location='../vista/principalProfesor.html'
+             window.location='../vista/principalProfesor.php'
              </script>";
              exit();       
 
