@@ -1,5 +1,4 @@
-<?php require '../controlador/codigoregistrate.php' ?>
-
+<?php require '../controlador/codigoRegistroEstudiante.php' ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -61,21 +60,19 @@
                     <div class="card-body">
                         <h2 class="card-title text-center">Registro de Calificación</h2> <!-- titulo formulario -->
 
-                        <form action="../controlador/codigoregistrate.php" method="post" id="formulario">
+                        <form action="../controlador/codigoRegistroEstudiante.php" method="post" id="formulario">
 
                             <select class="form-select" aria-label="Default select example" name="nombre_estudiante"
-                                required>
-                                <option value selected="">Seleccione una opción</option>
+                                required id="id_nombre">
+                                <option value selected="">Seleccione un estudiante</option>
                                 <?php
-                                require '../modelo/db_local.php';
-
-                                $sql = $conn->prepare('SELECT * FROM usuarios');
-                                $sql->execute();
-                                $data = $sql->fetchAll(); 
-                                
+                                require '../controlador/consultas.php';  
                                 foreach ($data as $valores):
-                                echo '<option value="">'.$valores["Nombre_usuario"].'</option>';
-                                endforeach;   
+                                ?>
+                                <option value="<?php echo $valores[0]; ?>"><?php echo $valores["1"]; ?>
+                                </option>
+                                <?php
+                                endforeach; 
                                 ?>
                             </select>
                             <!-- NOMBRE DE ESTUDIANTE -->
@@ -83,6 +80,7 @@
                             <div class="input-group flex-nowrap my-4">
                                 <span class="input-group-text formulario-registrate" id="addon-wrapping"><img
                                         src="../icons/badge_white_24dp.svg"></span>
+
                                 <input type="text" class="form-control" placeholder="Matrícula" aria-label="MATRICULA"
                                     aria-describedby="addon-wrapping" name="matricula" id="matricula">
                             </div><!-- MATRICULA -->
@@ -91,7 +89,7 @@
                                 <span class="input-group-text formulario-registrate" id="addon-wrapping"><img
                                         src="../icons/draw_white_24dp.svg"></span>
                                 <input type="text" class="form-control" placeholder="Programación"
-                                    aria-label="Programacion" aria-describedby="addon-wrapping" name="Programacion"
+                                    aria-label="Programacion" aria-describedby="addon-wrapping" name="programacion"
                                     id="Programacion">
                             </div><!-- MATERIA PROGRAMACIÓN -->
 
