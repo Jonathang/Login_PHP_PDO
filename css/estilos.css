@@ -77,6 +77,13 @@
   margin-left: 50px;
 }
 
+/* PAGINA REGISTRO PROFESOR */
+
+.formulario-registro {
+  width: 180px;
+  margin: auto;
+}
+
 /* MEDIA QUERIES */
 /*  Extra Small devices (Portrait phones, 576px and up)*/
 @media (min-width: 300px) {

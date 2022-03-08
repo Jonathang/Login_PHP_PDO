@@ -1,6 +1,6 @@
 <?php require '../controlador/codigoprincipal.php' ?>
 <?php
-    
+ 
     if(isset($_SESSION['usuario_id'])){
 
 ?>
@@ -36,10 +36,10 @@
                     <ul class="navbar-nav me-5 mb-2 mb-lg-0 m-0">
                         <li class="nav-item">
                             <!-- active es para seleccionar el item de la pagina activa -->
-                            <a class="nav-link active">Inicio</a>
+                            <a class="nav-link" href="principalAlumno.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="consultarEstudiante.php">Consultar</a>
+                            <a class="nav-link active">Consultar</a>
                         </li>
 
                         <li class="nav-item">
@@ -58,8 +58,9 @@
     <div class="container-fluid" id="contenido">
         <div class="row">
             <div class="col-12 datos">
-                <h2><?php echo "<h4>Bienvenido: " .$user['Nombre_usuario']. "</h4>"; ?></h2>
                 <h2><?php echo "<h4>Has iniciado como: " .$user['Tipo_usuario']. "</h4>"; ?></h2>
+                <h2><?php echo "<h4>Bienvenido: " .$user['Nombre_usuario']. "</h4>"; ?></h2>
+
             </div>
         </div>
     </div>

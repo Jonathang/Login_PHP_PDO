@@ -34,10 +34,10 @@
                     <ul class="navbar-nav me-5 mb-2 mb-lg-0 m-0">
                         <li class="nav-item">
                             <!-- active es para seleccionar el item de la pagina activa -->
-                            <a class="nav-link active" href="#">Inicio</a>
+                            <a class="nav-link active">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Registrar Calificación</a>
+                            <a class="nav-link" href="registroProfesor.php">Evaluar</a>
                         </li>
 
                         <li class="nav-item">
@@ -45,11 +45,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Usuario</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cerrar.php">Cerrar Sesión</a>
+                            <a class="nav-link" href="../cerrar.php">Salir</a>
                         </li>
                     </ul>
                 </div>

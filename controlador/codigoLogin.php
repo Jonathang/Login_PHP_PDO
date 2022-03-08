@@ -6,6 +6,7 @@ if($_POST){
   require '../modelo/db_local.php';
   $id = $_POST['id'];
   $password = $_POST['pass'];
+
   
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = $conn->prepare("SELECT * FROM usuarios WHERE ID_usuario=:id AND Pass=:pass");
@@ -14,10 +15,11 @@ if($_POST){
   $sql->execute();
   $resultado = $sql->fetch(PDO::FETCH_ASSOC);
 
+
   if($resultado){
     $_SESSION['usuario_id'] = $resultado['ID_usuario'];
 
-    if($resultado > 1){
+    if($resultado['Tipo_usuario'] == "E"){
       header("Location: ../vista/principalAlumno.php");
     }else{
       header("Location: ../vista/principalProfesor.php");
