@@ -1,9 +1,3 @@
-<?php require '../controlador/codigoprincipal.php' ?>
-<?php
- 
-    if(isset($_SESSION['usuario_id'])){
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -57,10 +51,55 @@
     <!-- CONTENIDO -->
     <div class="container-fluid" id="contenido">
         <div class="row">
-            <div class="col-12 datos">
-                <h2><?php echo "<h4>Has iniciado como: " .$user['Tipo_usuario']. "</h4>"; ?></h2>
+            <div>
+                <?php require '../controlador/datosEstudiantes.php' ?>
                 <h2><?php echo "<h4>Bienvenido: " .$user['Nombre_usuario']. "</h4>"; ?></h2>
+                <h2><?php echo "<h4>Matrícula: " .$user['matricula']. "</h4>"; ?></h2>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-fluid tabla-estudiantes">
+        <div class="row tabla-scroll">
+            <div class="table-responsive-sm tabla-scroll">
+                <table class="table table-striped table-hover tabla" cellspacing="0" width="100%">
+
+                    <thead class="cabecera">
+                        <tr class="campos">
+                            <td scope="col-12" class="text-center">Programación</td>
+                            <td scope="col-12" class="text-center">Matemáticas</td>
+                            <td scope="col-12" class="text-center">Algoritmos</td>
+                            <td scope="col-12" class="text-center">Lógica</td>
+                            <td scope="col-12" class="text-center">SO</td>
+                            <td scope="col-12" class="text-center">BD</td>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <?php require '../controlador/CodigoTablaEstudiante.php' ?>
+                        <?php
+            
+                foreach ($stm as $dato):
+                
+                  ?>
+
+                        <tr class="campos">
+                            <td class="text-center"><?php echo $dato->programacion; ?></td>
+                            <td class="text-center"><?php echo $dato->matematicas; ?></td>
+                            <td class="text-center"><?php echo $dato->algoritmos; ?></td>
+                            <td class="text-center"><?php echo $dato->logica; ?></td>
+                            <td class="text-center"><?php echo $dato->so; ?></td>
+                            <td class="text-center"><?php echo $dato->bd; ?></td>
+
+                        </tr>
+
+                        <?php
+                       endforeach
+  
+                  ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -71,11 +110,3 @@
 </body>
 
 </html>
-
-<?php
-    }else{
-        header('Location: ../index.html');
-    }
-
-
-?>

@@ -1,4 +1,5 @@
 <?php
+        // CONSULTA PARA LLENAR EL INPUT SELECT
     require '../modelo/db_local.php';
     $tipo= 'E';
 
