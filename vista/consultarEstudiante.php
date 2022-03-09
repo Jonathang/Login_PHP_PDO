@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
