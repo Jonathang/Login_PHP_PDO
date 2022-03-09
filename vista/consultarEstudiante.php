@@ -77,7 +77,7 @@
 
 
                     <tbody>
-                        <?php require '../controlador/CodigoTablaEstudiante.php' ?>
+                        <?php require '../controlador/codigoTablaEstudiante.php' ?>
                         <?php
             
                 foreach ($stm as $dato):

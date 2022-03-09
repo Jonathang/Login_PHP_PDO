@@ -8,9 +8,6 @@
     $sql->execute();
     $stm = $sql->fetchAll(PDO::FETCH_OBJ); 
 
-    if (count($stm) > 0) {
-      $user = $stm;
-    }
    }
    
 ?>
