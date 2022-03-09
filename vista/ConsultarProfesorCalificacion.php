@@ -72,15 +72,10 @@
                             <td scope="col-sm-12" class="text-center">BD</td>
                         </tr>
                     </thead>
-
-
                     <tbody>
                         <?php
-            
-                foreach ($stm as $dato):
-                
-                  ?>
-
+                         foreach ($stm as $dato):
+                        ?>
                         <tr class="campos">
                             <td><?php echo $dato->matricula; ?></td>
                             <td><?php echo $dato->Nombre_usuario; ?></td>
@@ -90,13 +85,11 @@
                             <td class="text-center"><?php echo $dato->logica; ?></td>
                             <td class="text-center"><?php echo $dato->so; ?></td>
                             <td class="text-center"><?php echo $dato->bd; ?></td>
-
                         </tr>
 
                         <?php
                        endforeach
-  
-                  ?>
+                        ?>
                     </tbody>
                 </table>
             </div>
