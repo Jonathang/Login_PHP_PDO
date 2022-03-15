@@ -1,9 +1,12 @@
 <?php
     require '../modelo/db_local.php';
     
-    if (isset($_POST['id_nombre']) && isset($_POST['matricula']) && isset($_POST['programacion'])  && isset($_POST['matematicas'])  && isset($_POST['algoritmos'])  && isset($_POST['logica'])  && isset($_POST['so'])  && isset($_POST['bd'])) {
+    if (isset($_POST['id_nombre']) && isset($_POST['matricula']) && isset($_POST['programacion'])  
+        && isset($_POST['matematicas'])  && isset($_POST['algoritmos'])  && isset($_POST['logica'])  
+        && isset($_POST['so'])  && isset($_POST['bd'])) {
 
-        $sql = "INSERT INTO calificaciones (matricula, programacion, matematicas, algoritmos, logica, so, bd, usuario_id_fk) VALUES (:matricula, :programacion, :matematicas, :algoritmos, :logica, :so, :bd, :id_nombre)";
+        $sql = "INSERT INTO calificaciones (matricula, programacion, matematicas, algoritmos, logica, so, bd, usuario_id_fk) 
+        VALUES (:matricula, :programacion, :matematicas, :algoritmos, :logica, :so, :bd, :id_nombre)";
         $stmt = $conn->prepare($sql);  
 
         $matricula= $_POST['matricula'];
